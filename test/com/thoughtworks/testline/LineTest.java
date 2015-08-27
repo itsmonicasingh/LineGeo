@@ -17,4 +17,9 @@ public class LineTest {
         assertEquals(1.0, calculateLength(0, 0, 0, 1), 0.0001);
     }
 
+    @Test
+    public void shouldReturnLengthOfDiagonalLine() {
+        assertEquals(1.41421, calculateLength(0, 0, 1, 1), 0.0001);
+    }
+
 }
