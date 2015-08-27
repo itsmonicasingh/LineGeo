@@ -17,4 +17,12 @@ public class Line {
         return sqrt(pow(x2 - x1, 2.0) + pow(y2 - y1, 2.0));
     }
 
+    @Override
+    public boolean equals(Object that) {
+        if(that == null) {
+            return false;
+        }
+        return true;
+    }
+
 }

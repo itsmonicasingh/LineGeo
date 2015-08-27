@@ -19,4 +19,10 @@ public class LineTest {
         assertEquals(line, line);
     }
 
+    @Test
+    public void shouldNotEquateLineWithNullObject() {
+        Line line = new Line(0, 0, 0, 0);
+        assertNotEquals(line, null);
+    }
+
 }
