@@ -9,4 +9,12 @@ public class Point {
         this.y = y;
     }
 
+    @Override
+    public boolean equals(Object that) {
+        if(that == null) {
+            return false;
+        }
+        return true;
+    }
+
 }

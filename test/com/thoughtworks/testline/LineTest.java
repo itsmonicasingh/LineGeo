@@ -37,4 +37,9 @@ public class LineTest {
         assertEquals(point, point);
     }
 
+    @Test
+    public void shouldNotEquatePointToNullObject() {
+        Point point = new Point(0, 0);
+    }
+
 }
