@@ -12,4 +12,9 @@ public class LineTest {
         assertEquals(0.0, calculateLength(1, 1, 1, 1), 0.0001);
     }
 
+    @Test
+    public void shouldReturnLengthOfVerticalLine() {
+        assertEquals(1.0, calculateLength(0, 0, 0, 1), 0.0001);
+    }
+
 }
