@@ -14,7 +14,11 @@ public class Point {
         if(that == null) {
             return false;
         }
-        return true;
+        Point thatPoint = (Point)that;
+        if(x == thatPoint.x && y == thatPoint.y)
+            return true;
+        else
+            return false;
     }
 
 }

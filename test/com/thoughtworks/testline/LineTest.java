@@ -55,4 +55,12 @@ public class LineTest {
         assertEquals(point1, point2);
     }
 
+    @Test
+    public void shouldNotEquateTwoDifferentPoints() {
+        Point point1 = new Point(0, 0);
+        Point point2 = new Point(1, 0);
+
+        assertNotEquals(point1, point2);
+    }
+
 }
