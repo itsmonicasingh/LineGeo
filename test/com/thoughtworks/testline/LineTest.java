@@ -8,18 +8,9 @@ import static com.thoughtworks.testline.Line.*;
 public class LineTest {
 
     @Test
-    public void shouldReturnZeroForLineWithSameEndPoints() {
-        assertEquals(0.0, calculateLength(1, 1, 1, 1), 0.0001);
-    }
-
-    @Test
-    public void shouldReturnLengthOfVerticalLine() {
-        assertEquals(1.0, calculateLength(0, 0, 0, 1), 0.0001);
-    }
-
-    @Test
-    public void shouldReturnLengthOfDiagonalLine() {
-        assertEquals(1.41421, calculateLength(0, 0, 1, 1), 0.0001);
+    public void shouldCalculateLengthOfALineAsObjectWithCoordinateProperties() {
+        Line line = new Line(0, 0, 1, 1);
+        assertEquals(1.41421, line.calculateLength(), 0.0001);
     }
 
 }
