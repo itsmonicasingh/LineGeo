@@ -20,7 +20,12 @@ public class Line {
         if(that == null || !(that instanceof Line)) {
             return false;
         }
-        return true;
+        Line thatLine = (Line)that;
+        if(p1.equals(thatLine.p2)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }

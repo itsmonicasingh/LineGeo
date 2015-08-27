@@ -3,7 +3,6 @@ package com.thoughtworks.testline;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
-import static com.thoughtworks.testline.Line.*;
 
 public class LineTest {
 
@@ -69,6 +68,14 @@ public class LineTest {
         Line line2 = new Line(new Point(0, 0), new Point(1, 1));
 
         assertEquals(line1, line2);
+    }
+
+    @Test
+    public void shouldNotEquateLineIfOnlyEndPointTwoIsSameAsOtherEndPointTwo() {
+        Line line1 = new Line(new Point(1, 1), new Point(4, 5));
+        Line line2 = new Line(new Point(2, 3), new Point(4, 5));
+
+        assertNotEquals(line1, line2);
     }
 
 }
