@@ -25,4 +25,10 @@ public class LineTest {
         assertNotEquals(line, null);
     }
 
+    @Test
+    public void shouldNotEquateWithAnObjectOfDifferentType() {
+        Line line = new Line(0, 0, 0, 0);
+        assertNotEquals(line, "String");
+    }
+
 }

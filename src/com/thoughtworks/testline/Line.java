@@ -19,7 +19,7 @@ public class Line {
 
     @Override
     public boolean equals(Object that) {
-        if(that == null) {
+        if(that == null || !(that instanceof Line)) {
             return false;
         }
         return true;
