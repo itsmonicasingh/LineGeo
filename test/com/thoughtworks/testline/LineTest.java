@@ -63,4 +63,12 @@ public class LineTest {
         assertNotEquals(point1, point2);
     }
 
+    @Test
+    public void shouldEquateForSameLines() {
+        Line line1 = new Line(new Point(0, 0), new Point(1, 1));
+        Line line2 = new Line(new Point(0, 0), new Point(1, 1));
+
+        assertEquals(line1, line2);
+    }
+
 }
