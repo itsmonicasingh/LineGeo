@@ -15,10 +15,11 @@ public class Point {
             return false;
         }
         Point thatPoint = (Point)that;
-        if(x == thatPoint.x && y == thatPoint.y)
+        if(x == thatPoint.x && y == thatPoint.y) {
             return true;
-        else
+        } else {
             return false;
+        }
     }
 
 }

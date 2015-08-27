@@ -21,8 +21,12 @@ public class Line {
             return false;
         }
         Line thatLine = (Line)that;
-        if(p1.equals(thatLine.p2)) {
-            return true;
+        if(p1.equals(thatLine.p1)) {
+            if(p2.equals(thatLine.p2)) {
+                return true;
+            } else {
+                return false;
+            }
         } else {
             return false;
         }
