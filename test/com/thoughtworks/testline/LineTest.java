@@ -9,34 +9,32 @@ public class LineTest {
 
     @Test
     public void shouldCalculateLengthOfALineAsObjectWithCoordinateProperties() {
-        Point p1 = new Point(0, 0);
-        Point p2 = new Point(1, 1);
-        Line line = new Line(p1, p2);
+        Line line = new Line(new Point(0, 0), new Point(1, 1));
         assertEquals(1.41421, line.calculateLength(), 0.0001);
     }
 
     @Test
     public void shouldNotEquateLineWithNullObject() {
-        Point p1 = new Point(0, 0);
-        Point p2 = new Point(0, 0);
-        Line line = new Line(p1, p2);
+        Line line = new Line(new Point(0, 0), new Point(0, 0));
         assertNotEquals(line, null);
     }
 
     @Test
     public void shouldNotEquateWithAnObjectOfDifferentType() {
-        Point p1 = new Point(0, 0);
-        Point p2 = new Point(0, 0);
-        Line line = new Line(p1, p2);
+        Line line = new Line(new Point(0, 0), new Point(0, 0));
         assertNotEquals(line, "String");
     }
 
     @Test
     public void shouldSuccessfullyEnforceThatLineUsesPointObjectsAsFields() {
-        Point p1 = new Point(0, 0);
-        Point p2 = new Point(0, 0);
-        Line line = new Line(p1, p2);
+        Line line = new Line(new Point(0, 0), new Point(0, 0));
         assertEquals(line, line);
+    }
+
+    @Test
+    public void shouldEquatePointToItself() {
+        Point point = new Point(0, 0);
+        assertEquals(point, point);
     }
 
 }
