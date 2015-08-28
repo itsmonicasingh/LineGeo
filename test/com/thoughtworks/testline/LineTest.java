@@ -86,4 +86,12 @@ public class LineTest {
         assertNotEquals(line1, line2);
     }
 
+    @Test
+    public void shouldEquateLineEvenIfEndPointsAreInReverseOrder() {
+        Line line1 = new Line(new Point(1, 1), new Point(4, 5));
+        Line line2 = new Line(new Point(4, 5), new Point(1, 1));
+
+        assertEquals(line1, line2);
+    }
+
 }

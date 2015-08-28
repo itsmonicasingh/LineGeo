@@ -27,7 +27,9 @@ public class Line {
             } else {
                 return false;
             }
-        } else {
+        } else if(p2.equals(thatLine.p1)) {
+            return true;
+        } else{
             return false;
         }
     }
