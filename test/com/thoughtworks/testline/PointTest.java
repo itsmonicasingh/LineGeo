@@ -34,4 +34,12 @@ public class PointTest {
 
         assertNotEquals(point1, point2);
     }
+
+    @Test
+    public void shouldCalculateZeroDistanceFromSamePoint() {
+        Point point1 = new Point(0, 0);
+
+        assertEquals(0.0, point1.distanceFromPoint(point1), 0.0001);
+    }
+
 }
