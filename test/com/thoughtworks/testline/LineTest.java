@@ -94,4 +94,12 @@ public class LineTest {
         assertEquals(line1, line2);
     }
 
+    @Test
+    public void shouldNotEquateIfOnlyEndPointTwoIsSameAsOtherEndPointOne() {
+        Line line1 = new Line(new Point(1, 1), new Point(4, 5));
+        Line line2 = new Line(new Point(4, 5), new Point(2, 3));
+
+        assertNotEquals(line1, line2);
+    }
+
 }

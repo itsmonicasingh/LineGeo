@@ -28,8 +28,12 @@ public class Line {
                 return false;
             }
         } else if(p2.equals(thatLine.p1)) {
-            return true;
-        } else{
+            if(p1.equals(thatLine.p2)) {
+                return true;
+            } else {
+                return false;
+            }
+        } else {
             return false;
         }
     }
