@@ -11,8 +11,8 @@ public class Line {
         this.p2 = p2;
     }
 
-    public double calculateLength() {
-        return sqrt(pow(p2.x - p1.x, 2.0) + pow(p2.y - p1.y, 2.0));
+    public double length() {
+        return p1.distanceFromPoint(p2);
     }
 
     @Override
@@ -22,17 +22,9 @@ public class Line {
         }
         Line thatLine = (Line)that;
         if(p1.equals(thatLine.p1)) {
-            if(p2.equals(thatLine.p2)) {
-                return true;
-            } else {
-                return false;
-            }
+            return p2.equals(thatLine.p2);
         } else if(p2.equals(thatLine.p1)) {
-            if(p1.equals(thatLine.p2)) {
-                return true;
-            } else {
-                return false;
-            }
+            return p1.equals(thatLine.p2);
         } else {
             return false;
         }
