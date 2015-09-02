@@ -41,5 +41,4 @@ public class PointTest {
 
         assertEquals(0.0, point1.distanceFromPoint(point1), 0.0001);
     }
-
 }
